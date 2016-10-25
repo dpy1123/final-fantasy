@@ -1,6 +1,7 @@
 FROM java:8
-
+WORKDIR /
+COPY data/output.csv /result.txt
 COPY hackathonCaseB.sh /
-COPY data/output.csv /output/result.txt
-
-ENV PATH $PATH:/
+CMD ["/bin/bash"]
+RUN chmod +x /hackathonCaseB.sh
+VOLUME [/output]
