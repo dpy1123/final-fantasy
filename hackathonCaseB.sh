@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo 'aha'
+echo 'begin'
 cp /result.txt /output/result.txt
+echo 'cp finish'
 
-sleep 2
+tail -100 /output/result.txt
